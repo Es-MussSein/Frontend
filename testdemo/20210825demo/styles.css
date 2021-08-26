@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+.head {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+/* 版心 */
+.header {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+    align-content: center;
+}
+.header_general {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header_right {
+    height: 100px;
+}
+.header_list {
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header_items {
+    width: 40px;
+    height: 100px;
+    color: rgba(40, 43, 52, 0.3);
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    transition: color 0.4s, border 0.4s;
+    margin-right: 40px;
+    line-height: 100px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 17px;
+
+}
+.header_items:hover {
+    border: #2b2b34;
+    border-bottom: 4px solid #2b2b34;
+    
+}
+
+.head_right ul li:hover {
+    color: #2b2b34;
+    border-bottom: 4px solid #2b2b34;
+}
+.header_button {
+    height: 40px;
+    line-height: 40px;
+    background-color: #5576ec;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    width: 103px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    opacity: 1;
+}
+
+.content_text {
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+.content_overview_title 
+{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.content_overview_box {
+    background-color: #fff;
+    padding: 20px;
+    
+}
+.content_overview_IDinfo {
+    padding:40px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.ID,
+.content_overview_signers_account
+{
+    /* position: relative; */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.id_title {
+    font-size: 14px;
+    line-height: 20px;
+    width: 100px;
+    color: rgba(40, 43, 52, 0.6);
+
+}
+.id_link {
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5576ec;
+    word-break: break-all;
+}
+.content_overview_signers_box ,
+.content_overview_witnesses_box{
+    padding-left: 30px;
+}
+.content_overview_witnesses_box {
+    margin-bottom: 20px;
+}
+.content_overview_signers_title,
+.content_overview_witnesses_title {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content_overview_signers_account,
+.content_overview_signers_scopes ,
+.content_overview_witnesses_invocation,
+.content_overview_witnesses_vertification{
+    line-height: 20px;
+    font-size: 14px;
+    /* position: relative; */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.scopes,
+.account,
+.vertification,
+.invocation {
+    width: 100px;
+    line-height: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+.account_nonlink,
+.scopes_nonlink,
+.invocation_nonlink,
+.vertification_nonlink {
+    flex: 1;
+    font-size: 14px;    
+    line-height: 20px;
+
+}
+
+.content_script_title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+
+}
+.text_multi {
+    width: 1080px;
+    height: 204px;
+    word-break: break-all;
+    padding: 30px 30px 54px 30px;
+    background-color: #fff;
+    opacity: 0.6;
+    font-size: 14px;
+    line-height: 24px;
+    overflow: scroll;
+}
+.content_transfer_title {
+    margin-top: 40px;
+    margin-bottom: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+.content_transfer_outer {
+    padding: 40px 30px 0 30px;
+    background-color: #fff;
+}
+.content_transfer_box {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.content_transfer_heading {
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    background-color: #5576ec;
+
+}
+.content_transfer_heading th {
+    text-align: left;
+    align-content: center;
+    padding: 20px;
+}
+.content_transfer_box tbody {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+}
+.content_transfer_box tbody tr td{
+    border-bottom: 1px solid #fafafa;
+
+    padding: 20px;
+}
+.content_transfer_box tbody tr td:nth-last-child(1) {
+    border-bottom: 1px solid transparent;
+}
+
+.body_link{
+    color: #5576ec;
+}
+
+
+@media only screen and (max-width:750px) {
+    .head {
+        width: 100%;
+        height: 50px;
+    }
+    /* 版心 */
+    .header {
+        width: 100%;
+        height: 50px;
+        max-width: 1080px;
+    }
+    .logo {
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+    }
+
+    .header_right {
+        height: 50px;
+    }
+    .header_list {
+        display: none;
+    }
+
+    .header_button {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        width: 80px;
+        margin-right: 10px;
+    }
+    
+    .content_text {
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+
+    }
+    .content_overview_title 
+    {
+        font-size: 12px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .content_overview_box {
+        padding: 10px;
+    }
+    .content_overview_IDinfo {
+        padding:10px 10px; 
+    }
+    .ID,
+    .content_overview_signers_account
+    {
+        margin-bottom: 5px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .id_title {
+        width: 95px;
+    }
+    .content_overview_signers_box ,
+    .content_overview_witnesses_box{
+        padding-left: 10px;
+    }
+    .content_overview_witnesses_box {
+        line-height: 15px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .content_overview_signers_title,
+    .content_overview_witnesses_title {
+
+
+        margin-bottom: 5px;
+    }
+    
+    .content_overview_signers_account,
+    .content_overview_signers_scopes ,
+    .content_overview_witnesses_invocation,
+    .content_overview_witnesses_vertification{
+        font-size: 12px;    
+        line-height: 15px;
+        margin-bottom: 5px;
+
+    
+    }
+    .scopes,
+    .account,
+    .vertification,
+    .invocation {
+        width: 100px;
+
+    }
+
+    
+    .content_script_title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+        line-height: 15px;    
+    }
+    .text_multi {
+        width: 100%;
+        height: 100px;
+        word-break: break-all;
+        padding: 15px 15px 20px 15px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .content_transfer_title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 10px;
+    }
+    .content_transfer_outer {
+        padding: 10px;
+        overflow-x: auto;
+    }
+    
+
+
+
+
+}

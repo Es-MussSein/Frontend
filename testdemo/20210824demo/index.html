@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .head {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+        }
+
+        .logo {
+            height: 36px;
+            width: 183px;
+            align-content: center;
+        }
+
+        .head_right {
+            height: 100px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head_right ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .head_right ul li {
+            height: 100px;
+            line-height: 100px;
+            margin-right: 40px;
+            font-size: 14px;
+            color: rgba(40, 43, 52, 0.3);
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+            transition: color 0.4s, border 0.4s;
+        }
+
+        .head_right ul li:hover {
+            color: #2b2b34;
+            border-bottom: 4px solid #2b2b34;
+        }
+
+        /* 版心 */
+        .head_content {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .button {
+            line-height: 40px;
+            height: 40px;
+            width: 103px;
+            font-size: 14px;
+            background-color: hsl(227, 80%, 63%);
+            border-radius: 4px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.4s;
+            opacity: 1;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            width: 100%;
+            height: 100px;
+        }
+
+        .content_title {
+            margin-top: 150px;
+            text-align: center;
+            color: #2b2b34;
+            font-size: 48px;
+            line-height: 58px;
+            font-style: normal;
+            font-weight: 800;
+        }
+
+        .search {
+            margin-top: 60px;
+            height: 80px;
+            border-radius: 4px;
+            background-color: #fff;
+            position: relative;
+
+        }
+
+        .search_icon {
+            width: 18px;
+            height: 18px;
+            background-color: #000;
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+
+
+        }
+
+        .search_input {
+            display: inline-block;
+            height: 80px;
+            width: 100%;
+            line-height: 80px;
+            outline: none;
+            border: none;
+            font: normal normal 16px Avenir;
+            padding: 0 76px 0 68px;
+        }
+
+        .button_search {
+            line-height: 60px;
+            height: 60px;
+            width: 128px;
+            font-size: 14px;
+            background-color: #5576ec;
+            border-radius: 4px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.4s;
+            opacity: 1;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+        .overeview_title {
+            height: 24px;
+            margin-top: 120px;
+            margin-bottom: 20px;
+            font: normal 700 18px Inter;
+            line-height: 24px;
+        }
+
+
+        .overview_info ul {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            padding-bottom: 40px;
+        }
+
+        .overview_info ul li {
+            width: 33.33%;
+            margin-top: 40px;
+            padding-left: 30px;
+
+        }
+
+        .overview_info_blocks {
+            font: normal 500 12px Inter;
+            color: rgba(40, 43, 52, 0.3);
+            line-height: 15px;
+            margin-bottom: 10px;
+        }
+
+        .overview_info_blocks_detail {
+            font: normal bold 24px Inter;
+            color: #000;
+            line-height: 29px;
+        }
+
+        .info {
+            margin-top: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .info_ele {
+            width: 520px;
+        }
+
+        .info_transactions_lay {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        .info_transactions_title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .more {
+            font-size: 12px;
+            line-height: 14.52px;
+            color: rgba(35, 35, 35, 1);
+        }
+
+        .latest_ele {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 4px;
+
+        }
+
+        .latest_ele ul li {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .top_lay,
+        .bottom_lay {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .top_lay {
+            margin-bottom: 18px;
+        }
+
+        .blocks {
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(40, 43, 52, 0.3);
+
+        }
+
+        .blocks span {
+            margin-left: 10px;
+        }
+
+        span.link_span {
+            color: #5576ec;
+        }
+
+        span.size_span {
+            color: black;
+        }
+
+        .update {
+            font-size: 12px;
+        }
+        @media only screen and (max-width:750px){
+        .head {
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+        }
+
+        .logo {
+            height: 10px;
+            width: 10px;
+            padding-left: 10px;
+        }
+
+        .head_right {
+            height: 50px;
+        }
+
+        .head_right ul {
+            display: none;
+        }
+
+        /* 版心 */
+        .head_content {
+            width: 100%;
+            height: 50px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .button {
+            line-height: 30px;
+            height: 30px;
+            width: 60px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .content {
+            width: 100%;
+            height: 100px;
+        }
+
+        .content_title {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+
+        .search {
+            margin-top: 10px;
+            height: 40px;
+        }
+
+        .search_icon {
+            width: 10px;
+            height: 10px;
+            left: 10px;
+        }
+
+        .search_input {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px 0 30px;
+        }
+
+        .button_search {
+            line-height: 30px;
+            height: 30px;
+            width: 50px;
+            font-size: 12px;
+            right: 10px;
+        }
+
+        .overeview_title {
+            height: 24px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            font: normal 600 13px Inter;
+            line-height: 24px;
+        }
+
+        .overview_info ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 10px;
+
+        }
+
+        .overview_info ul li {
+            width: 100%;
+            margin-top: 20px;
+            padding-left: 15px;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .overview_info_blocks {
+            font: normal 500 14px Inter;
+            line-height: 10px;
+            margin-bottom: 10px;
+
+            width: 65%;
+        }
+
+        .overview_info_blocks_detail {
+            width: 35%;
+            font: normal bold 12px Inter;
+            line-height: 20px;
+
+        }
+
+        .info {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            flex-wrap: wrap;
+
+            width: 100%;
+
+        }
+
+        .info_ele {
+            width: 100%;
+        }
+
+        .info_transactions_lay {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+
+        }
+
+        .info_transactions_title {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 12px;
+        }
+
+        .more {
+            font-size: 12px;
+            line-height: 13px;
+        }
+
+        .latest_ele {
+            padding: 10px 20px;
+
+        }
+
+        .latest_ele ul li {
+            padding: 10px 0;            
+        }
+
+        .top_lay,
+        .bottom_lay {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } 
+
+        .top_lay {
+            margin-bottom: 5px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .blocks {
+            font-size: 10px;
+            line-height: 16px;
+            width: 100%;
+            /* margin-bottom: 5px; */
+
+
+        }
+
+        .blocks span {
+            margin-left: 10px;
+        }
+
+
+
+        .update {
+            font-size: 10px;
+            padding-left: 150px;
+
+        }
+            
+
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <div class="head">
+        <div class="head_content flex">
+            <img class="logo" src="" alt="NEO">
+            <div class="head_right flex">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+                <div class="button">Sign up</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content head_content">
+        <div>
+            <div class="content_title">Welcome to Neo Explorer</div>
+            <div class="search">
+                <img src="#" class="search_icon" alt="">
+                <input type="text" class="search_input" placeholder="NIFTs................">
+                <div class="button_search">Search</div>
+            </div>
+        </div>
+
+        <div class="overview ">
+            <div class="overeview_title ">OVERVIEW</div>
+            <div class="overview_info">
+                <ul>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info ">
+
+            <div class="info_blocks info_ele">
+                <div class="info_transactions_lay">
+                    <h3 class="info_transactions_title">LATEST TRANSACTIONS</h3>
+                    <h4 class="more">more...</h4>
+                </div>
+
+                <div class="info_transactions_detail latest_ele">
+                    <ul>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+            <div class="info_transactions info_ele">
+                <div class="info_transactions_lay">
+                    <h3 class="info_transactions_title">LATEST TRANSACTIONS</h3>
+                    <h4 class="more">more...</h4>
+                </div>
+
+                <div class="info_blocks_detail latest_ele">
+                    <ul>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
