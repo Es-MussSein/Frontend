@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 响应式布局：rem -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./demo1_2rem.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt =
+                    "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth > 750 ? 750 : docEl.clientWidth;
+
+                    if (!clientWidth) {
+                        return;
+                    }
+
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+                };
+
+            recalc();
+
+            if (!doc.addEventListener) return;
+
+            win.addEventListener(resizeEvt, recalc, false);
+
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+    <title>demo1_2rem</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="head_content flex">
+            <img class="logo" src="" alt="NEO">
+            <div class="head_right flex">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+                <div class="button">Sign up</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content head_content">
+        <div>
+            <div class="content_title">Welcome to Neo Explorer</div>
+            <div class="search">
+                <img src="#" class="search_icon" alt="">
+                <input type="text" class="search_input" placeholder="NIFTs................">
+                <div class="button_search">Search</div>
+            </div>
+        </div>
+
+        <div class="overview ">
+            <div class="overeview_title ">OVERVIEW</div>
+            <div class="overview_info">
+                <ul>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                    <li>
+                        <div class="overview_info_blocks">TOTAL BLOCKS</div>
+                        <div class="overview_info_blocks_detail">💲2,207.19</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info ">
+
+            <div class="info_blocks info_ele">
+                <div class="info_transactions_lay">
+                    <h3 class="info_transactions_title">LATEST TRANSACTIONS</h3>
+                    <h4 class="more">more........</h4>
+                </div>
+
+                <div class="info_transactions_detail latest_ele">
+                    <ul>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+            <div class="info_transactions info_ele">
+                <div class="info_transactions_lay">
+                    <h3 class="info_transactions_title">LATEST TRANSACTIONS</h3>
+                    <h4 class="more">more...</h4>
+                </div>
+
+                <div class="info_blocks_detail latest_ele">
+                    <ul>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="top_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="size_span">1,272,0000</span>
+                                </div>
+
+                            </div>
+                            <div class="bottom_lay">
+                                <div class="blocks">
+                                    blocks:
+                                    <span class="link_span">1,272,0000</span>
+                                </div>
+                                <div class="blocks update">
+                                    22s ago
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+ 
+
+    </div>
+</body>
+
+</html>

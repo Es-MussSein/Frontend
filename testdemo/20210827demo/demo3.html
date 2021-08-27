@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .one_point,
+        .two_point{
+            width: 10px;
+            height: 10px;
+            background-color: forestgreen;
+            border-radius: 20px;
+        }
+        .one_content,
+        .two_content{
+            /* background-color: green; */
+            margin-left: 10px;
+            font-size: 20px;
+            line-height: 20px;
+            width: 200px;
+        }
+        .float_left{
+            float: left;
+        }
+        .clearfix::after {
+            content: '';
+            display: inline-block;
+            clear: both;
+        }
+        .items {
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+            padding-left: 5px;
+        }
+        .items::before {
+            content: '';
+            height: 5px;
+            width: 5px;
+            
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <div class="one clearfix">
+            <div class="one_point float_left"></div>
+            <div class="one_content float_left">1234567890</div>
+        </div>
+        <div class="two clearfix">
+            <div class="two_point float_left"></div>
+            <div class="two_content float_left">1234567890</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="items">123456</div>
+        <div class="items">123456</div>
+    </div>
+</body>
+</html>

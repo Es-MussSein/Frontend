@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 响应式布局：rem -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./demo2_3rem.css">
+    <title>demo2_3rem</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt =
+                    "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth > 750 ? 750 : docEl.clientWidth;
+
+                    if (!clientWidth) {
+                        return;
+                    }
+
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+                };
+
+            recalc();
+
+            if (!doc.addEventListener) return;
+
+            win.addEventListener(resizeEvt, recalc, false);
+
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+</head>
+<div class="head">
+    <div class="header flex">
+        <img src="3" alt="NEO">
+        <div class="header_right flex">
+            <div class="header_list flex">
+                <div class="header_items">
+                    HOME
+                </div>
+                <div class="header_items">
+                    HOME
+                </div>
+                <div class="header_items">
+                    HOME
+                </div>
+                <div class="header_items">
+                    HOME
+                </div>
+                <div class="header_items">
+                    HOME
+                </div>
+                <div class="header_items">
+                    HOME
+                </div>
+            </div>
+            <div class="header_button">
+                sign up
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content header">
+    <div class="content_title">Transection ID</div>
+    <div class="content_overview">
+        <div class="content_overview_title">
+            Overview
+        </div>
+        <div class="content_overview_box">
+            <div class="content_overview_box_info">
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">
+                        0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor
+                    </div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+                <div class="content_overview_box_info_id">
+                    <div class="content_overview_box_info_id_name">Tx ID</div>
+                    <div class="content_overview_box_info_id_detail">0x12343fggggsmewqepor</div>
+                </div>
+            </div>
+            <div class="content_overview_box_signers">
+                <div class="content_overview_box_signers_title">Signers</div>
+                <div class="content_overview_box_signers_info">
+                    <div class="content_overview_box_signers_account">
+                        <div class="content_overview_box_signers_account_name">
+                            Account:
+                        </div>
+                        <div class="content_overview_box_signers_account_detail">
+                            0x12343fggggsmewqepor
+                        </div>
+                    </div>
+                    <div class="content_overview_box_signers_account">
+                        <div class="content_overview_box_signers_account_name">
+                            Account:
+                        </div>
+                        <div class="content_overview_box_signers_account_detail">
+                            0x12343fggggsmewqepor
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content_overview_box_witnesses">
+                <div class="content_overview_box_witnesses_title">Witnesses</div>
+                <div class="content_overview_box_witnesses_info">
+                    <div class="content_overview_box_signers_account">
+                        <div class="content_overview_box_signers_account_name">
+                            Invocation:
+                        </div>
+                        <div class="content_overview_box_signers_account_detail">
+                            0x12343fggggsmewqepor
+                        </div>
+                    </div>
+                    <div class="content_overview_box_signers_account">
+                        <div class="content_overview_box_signers_account_name">
+                            Vertification:
+                        </div>
+                        <div class="content_overview_box_signers_account_detail">
+                            0x12343fggggsmewqepor
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="content_script">
+        <div class="content_script_title">Script</div>
+        <div class="content_script_box">
+
+            <div class="content_script_text">
+                0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggg0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggs0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggg0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqeporgsmewqepormewqep0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggg0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggs0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggg0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqepor0x12343fggggs0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepor0x12343fggggsmewqepormewqeporgsmewqepormewqepormewqepormewqeporgsmewqepormewqeporormewqepormewqeporgsmewqepormewqepor
+            </div>
+
+        </div>
+    </div>
+    <div class="content_transfer">
+        <div class="content_transfer_title">Nep17Transfer</div>
+        <div class="content_transfer_outer">
+            <div class="content_transfer_box">
+                <table class="content_transfer_box_table">
+                    <thead>
+                        <tr>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                            <th>
+                                CONTRACT
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggs
+                            </td>
+                            <td>
+                                GasToken
+                            </td>
+                            <td>
+                                0x12343fggggsmewqepor
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>
