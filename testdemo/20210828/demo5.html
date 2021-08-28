@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt =
+                    "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth > 750 ? 750 : docEl.clientWidth;
+
+                    if (!clientWidth) {
+                        return;
+                    }
+
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+                };
+
+            recalc();
+
+            if (!doc.addEventListener) return;
+
+            win.addEventListener(resizeEvt, recalc, false);
+
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="./demo5.css">
+
+    <title>inst-v9</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="heading flex_1">
+            <img src="./images/编组 15.svg" alt="编组 15" class="header_left">
+            <div class="header_right ">
+                <div class="header_right_button_1">
+                    Register
+                </div>
+                <div class="header_right_button_2">
+                    Register
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="contenting">
+            <div class="content_accept">
+                <div class="content_accept_left">
+                    <div class="content_accept_left_img_top">
+                        <img src="./images/椭圆形备份 4(1).svg" alt="椭圆形备份 4" class="content_accept_left_img_top_1">
+                        <img src="./images/形状结合(2).svg" alt="形状结合" class="content_accept_left_img_top_2">
+                        <img src="./images/椭圆形.svg" alt="椭圆形" class="content_accept_left_img_top_3">
+                    </div>
+                    <div class="content_accept_left_title">
+                        Accept digital payments in crypto seamlessly
+                    </div>
+                    <div class="content_accept_left_hint">
+                        Payone provides a robust solution to integrate a crypto enabled payment system seamlessly into
+                        your business.
+                    </div>
+                    <div class="content_accept_left_img_bottom">
+                        <img src="./images/椭圆形备份 3.svg" alt="" class="content_accept_left_img_bottom_1">
+                        <img src="./images/椭圆形备份 5.svg" alt="" class="content_accept_left_img_bottom_2">
+                    </div>
+                </div>
+                <div class="content_accept_right">
+                    <img src="./images/椭圆形(1).svg" alt="" class="content_accept_right_rectangle_1 float_left">
+                    <img src="./images/椭圆形(2).svg" alt="" class="content_accept_right_rectangle_2 float_left">
+                    <img src="./images/椭圆形(3).svg" alt="" class="content_accept_right_rectangle_3 float_left">
+                    <img src="./images/椭圆形(4).svg" alt="" class="content_accept_right_rectangle_4 float_left">
+                    <img src="./images/椭圆形(5).svg" alt="" class="content_accept_right_rectangle_5 float_left">
+                    <img src="./组 2_slices/组 2.png" alt="" class="content_accept_right_rectangle_6 float">
+                </div>
+
+            </div>
+            <div class="content_crypto ">
+                <div class="content_crypto_left">
+                    <div class="content_crypto_left_title">Why crypto</div>
+                    <img src="./images/编组 20.svg" alt="" class="content_crypto_left_img">
+                </div>
+                <div class="content_crypto_right">
+                    <img src="./images/矩形备份.svg" alt="" class="content_crypto_right_img">
+                    <div class="content_crypto_right_list">
+                        <div class="content_crypto_right_1 ">
+                            <img src="./images/icon2.svg" alt="" class="content_crypto_right_1_img">
+                            <div class="content_crypto_right_1_text">
+                                <div class="content_crypto_right_1_title">Enable instant transactions</div>
+                                <div class="content_crypto_right_1_content">Payments in crypto happen directly between
+                                    you and your customers. No intermediaries, cutting payment processing time
+                                    substantially.</div>
+                            </div>
+                        </div>
+                        <div class="content_crypto_right_2 ">
+                            <img src="./images/icon1.svg" alt="" class="content_crypto_right_2_img">
+                            <div class="content_crypto_right_2_text">
+                                <div class="content_crypto_right_2_title">Avoid unnecessary charges</div>
+                                <div class="content_crypto_right_2_content">Crypto helps both you and your consumers
+                                    avoid banking fees and other transaction fees while enabling international payments.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_crypto_right_3 ">
+                            <img src="./images/icon4.svg" alt="" class="content_crypto_right_3_img">
+                            <div class="content_crypto_right_3_text">
+                                <div class="content_crypto_right_3_title">Protection against fraud</div>
+                                <div class="content_crypto_right_3_content">Traditional payment methods put merchants in
+                                    an unfavourable position in terms of fraud prevention. Crypto enables you to have
+                                    full control over completed transactions to prevent chargebacks and fraudulent
+                                    customers.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content_inst ">
+                <div class="content_inst_left">
+                    <div class="content_inst_left_title">Why inst</div>
+                    <div class="content_inst_left_img_top">
+                        <img src="./images/椭圆形备份 6.svg" alt="" class="content_inst_left_img_top_1">
+                        <img src="./images/椭圆形备份 3(1).svg" alt="" class="content_inst_left_img_top_2">
+                    </div>
+                    <div class="content_inst_left_list">
+                        <div class="content_inst_left_1">
+                            <img src="./images/undraw_Around_the_world_re_n353.svg" alt=""
+                                class="content_inst_left_1_img">
+                            <div class="content_inst_left_1_text">
+                                <div class="content_inst_left_1_title">Global scale</div>
+                                <div class="content_inst_left_1_content">Businesses operating on a global scale can take
+                                    advantage of our global outreach and cross-border transaction solution to explore
+                                    new customers and new markets worldwide.</div>
+                            </div>
+                        </div>
+                        <div class="content_inst_left_2">
+                            <img src="./images/undraw_Segmentation_re_gduq.svg" alt="" class="content_inst_left_2_img">
+                            <div class="content_inst_left_2_text">
+                                <div class="content_inst_left_2_title">Easy management</div>
+                                <div class="content_inst_left_2_content">Use an an intuitive dashboard to view and
+                                    manage all transaction data, track order information, refunds with a few simple
+                                    clicks, all in one place</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_inst_left_img_bottom">
+                        <img src="./images/编组 4.svg" alt="" class="content_inst_left_img_bottom_1">
+                        <img src="./images/椭圆形备份 3.svg" alt="" class="content_inst_left_img_bottom_2">
+                    </div>
+
+                </div>
+                <div class="content_inst_right">
+                    <img src="./images/形状结合.svg" alt="" class="content_inst_right_img">
+                    <div class="content_inst_right_list">
+                        <div class="content_inst_right_1">
+                            <img src="./images/undraw_Browsing_re_eycn.svg" alt="" class="content_inst_right_1_img">
+                            <div class="content_inst_right_1_text">
+                                <div class="content_inst_right_1_title">Swift integration</div>
+                                <div class="content_inst_right_1_content">Our easy-to-use tools and simple setup process
+                                    lets
+                                    you to start accepting crypto payments in basically no time.</div>
+                            </div>
+                        </div>
+                        <div class="content_inst_right_2">
+                            <img src="./images/undraw_Security_on_re_e491.svg" alt="" class="content_inst_right_2_img">
+                            <div class="content_inst_right_2_text">
+                                <div class="content_inst_right_2_title">High wallet compatibility</div>
+                                <div class="content_inst_right_2_content">Inst works with all major crypto wallets
+                                    placing no
+                                    bars on potential customers, guaranteeing a smooth crypto payment experience.</div>
+                            </div>
+                        </div>
+                        <div class="content_inst_right_3">
+                            <img src="./images/undraw_Windows_re_uo4w.svg" alt="" class="content_inst_right_3_img">
+                            <div class="content_inst_right_3_text">
+                                <div class="content_inst_right_3_title">Support for different e-commerce platforms</div>
+                                <div class="content_inst_right_3_content">Inst is compatible with multiple popular e-
+                                    commerce
+                                    platforms.</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="content_blue">
+            <div class="contenting_blue ">
+                <div class="content_digital flex">
+                    <div class="content_digital_left">
+                        <div class="content_digital_left_text">
+                            <div class="content_digital_left_title">
+                                Digital Currency Gateway
+                            </div>
+                            <div class="content_digital_left_content">
+                                Convert your digital currency in a stable manner through our technology and network,
+                                break
+                                the wall of a single wallet. The system will automatically choose the best average
+                                market
+                                price for each request.
+                            </div>
+                        </div>
+                        <img src="./images/椭圆形备份 6(1).svg" alt="" class="content_digital_left_img">
+                    </div>
+                    <div class="content_digital_right ">
+                        <div class="content_digital_right_text_1 flex">
+                            <img src="./images/编组 31.svg" alt="" class="content_digital_right_text_1_img">
+                            <div class="content_digital_right_text_1_content">Your customer chooses pay with
+                                cryptocurrency
+                                during the top up process.</div>
+                        </div>
+
+                        <img src="./images/xiayibu.svg" alt="" class="next">
+
+                        <div class="content_digital_right_text_2 flex">
+                            <img src="./images/编组 28.svg" alt="" class="content_digital_right_text_2_img">
+                            <div class="content_digital_right_text_2_content">KYC standard</div>
+                        </div>
+
+                        <img src="./images/xiayibu.svg" alt="" class="next">
+
+                        <div class="content_digital_right_text_3 flex">
+                            <img src="./images/编组 21.svg" alt="" class="content_digital_right_text_3_img">
+                            <img src="./images/Noumena instantly co.svg" alt=""class="content_digital_right_text_3_content">
+                        </div>
+
+                        <img src="./images/xiayibu.svg" alt="" class="next">
+
+                        <div class="content_digital_right_text_4 flex">
+                            <img src="./images/编组 27.svg" alt="" class="content_digital_right_text_4_img">
+                            <div class="content_digital_right_text_4_content">Your customer would be received balance in
+                                this card which issued by your system.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="contenting">
+                <div class="content_bottom">
+                    <img src="./images/椭圆形备份 4.svg" alt="" class="content_bottom_img">
+                    <div class="content_bottom_security">
+                        <div class="content_bottom_security_top">
+                            <div class="content_bottom_security_title">Security First</div>
+                            <img src="./images/形状结合(1).svg" alt="" class="content_bottom_security_img">
+                        </div>
+                        <div class="content_bottom_security_list">
+                            <div class="content_bottom_security_items_1">
+                                <img src="./images/编组 18.svg" alt="" class="content_bottom_security_items_1_img">
+                                <div class="content_bottom_security_items_1_title">IBM HSM FIPS 140-2</div>
+                                <div class="content_bottom_security_items_1_content">A complete tamper-resistant
+                                    container, all plaintext keys on the system are deleted the moment unauthorized
+                                    access is detected.</div>
+                            </div>
+                            <div class="content_bottom_security_items_2">
+                                <img src="./images/编组 22.svg" alt="" class="content_bottom_security_items_2_img">
+                                <div class="content_bottom_security_items_2_title">Keep your private data security</div>
+                                <div class="content_bottom_security_items_2_content">Data security for each
+                                    service-service communication is achieved by verifying the signature of transferred
+                                    data based on the private key used.</div>
+                            </div>
+                            <div class="content_bottom_security_items_3">
+                                <img src="./images/编组 23.svg" alt="" class="content_bottom_security_items_3_img">
+                                <div class="content_bottom_security_items_3_title">Encryption</div>
+                                <div class="content_bottom_security_items_3_content">Based on the micro service
+                                    framework, the operation process and corresponding privileges are recorded in a
+                                    block and mTLS is used to ensure safe communication.</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="content_bottom_ready">
+                        <div class="content_bottom_ready_title">Ready to get started?<br>
+                            Get in touch or create an account.</div>
+                        <div class="content_bottom_ready_button flex_1">
+                            <div class="content_bottom_ready_button_1">CONEACT</div>
+                            <div class="content_bottom_ready_button_2">LOG IN</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="content_foot">
+            <div class="contenting_foot contenting">
+                <div class="content_bottom_foot">
+                    <img src="./images/编组 15(1).svg" alt="" class="content_bottom_foot_img">
+                    <div class="content_bottom_foot_more flex">
+                        <div class="content_bottom_foot_list flex_1">
+                            <div class="content_bottom_foot_items_twitter">+TWITTER</div>
+                            <div class="content_bottom_foot_items_telegram">+TELEGRAM</div>
+                            <div class="content_bottom_foot_items_email">+EMAIL</div>
+                            <div class="content_bottom_foot_items_medium">+Medium</div>
+                        </div>
+                        <div class="content_bottom_foot_right">© 2021 inst. All rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
