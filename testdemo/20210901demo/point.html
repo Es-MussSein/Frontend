@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .content__lay {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project__lay {
+            width: 350px;
+            height: 350px;
+        }
+
+        .model {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 150px;
+            background: pink;
+            opacity: 0.6;
+            display: none;
+        }
+
+        .big_img {
+            position: absolute;
+            left: 400px;
+            top: 100px;
+            z-index: 2;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .big_img_content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content__lay">
+        <div class="project__lay">
+            <img src="./images/small.png" alt="">
+            <div class="model"></div>
+        </div>
+        <div class="big_img">
+            <img class="big_img_content" src="./images/big.png" alt="">
+        </div>
+    </div>
+</body>
+<script>
+
+    let projectLay = document.querySelector('.project__lay')
+    let model = document.querySelector('.model')
+    let bigImgLay = document.querySelector('.big_img')
+    let bigImgContent = document.querySelector('.big_img_content')
+    console.log('projectLay', projectLay);
+    console.log('model', model);
+    console.log('bigImgLay', bigImgLay);
+    console.log('bigImgContent', bigImgContent);
+    let oLeft = 0;
+    let oTop = 0;
+    let x = 0;
+    let y = 0;
+    projectLay.onmouseenter = function () {
+        model.style.display = 'block'
+        bigImgLay.style.display = 'block'
+    }
+
+    projectLay.onmouseleave = function () {
+        model.style.display = 'none'
+        bigImgLay.style.display = 'none'
+    }
+
+    projectLay.onmousemove = function (e) {
+        console.log('e', e);
+        x = e.clientX
+        y = e.clientY
+        
+        model.style.left = (x-75) + 'px'
+        model.style.top = (y-75) + 'px'
+        bigImgContent.style.left = -x + 'px'
+        bigImgContent.style.top = -y + 'px'
+    }
+
+</script>
+
+</html>

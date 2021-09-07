@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./MagnifyingLens.css">
+    <title>MagnifyingLens</title>
+</head>
+<body>
+    <div id="box1">
+        <img src="./images/small.png" alt="photo" id="img_small">
+        <div id="box_small" class="close"></div>
+    </div>
+    <div id="box2" class="close">
+        <img src="./images/big.png" alt="photo" id="img_big">
+    </div> 
+    
+    <script>
+    var box1 = document.getElementById("box1"),
+        box2 = document.getElementById("box2"),
+        box_small = document.getElementById("box_small"),
+        img_big = document.getElementById("img_big");
+    var oLeft = 0,oTop = 0,x = 0,y = 0,m = 0,n = 0;
+    box1.onmouseenter = function(){//设置移入显示事件
+        box2.className = "active";
+        box_small.className = "active";
+    }
+    box1.onmouseleave = function (){//设置移出隐藏事件
+        box2.className = "close";
+        box_small.className = "close";
+    }
+    box_small.onmousemove = function(e){//设置鼠标      事件
+        console.log(e);
+        x = e.clientX;
+        y = e.clientY;
+        box_small.style.left = x +'px';
+        box_small.style.top = y +'px';
+        img_big.style.left = -((parseInt((img_big.offsetWidth+x)/box2.offsetWidth)*x)) +'px';
+        img_big.style.top = -y +'px';        
+
+        //clientX提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)，左上角clienX的值为0
+        //offsetLeft：元素的左外边框至包含元素的左内边框之间的像素距离
+        // x = e.clientX - this.offsetLeft;
+        // y = e.clientY - this.offsetTop;
+        // document.onmousemove = function(e){//设置鼠标移动事件
+        //     oLeft = e.clientX - x;
+        //     oTop = e.clientY - y;
+        //     if(oLeft <= 0){//设置box_small的移动范围为盒子1
+        //         oLeft = 0;
+        //     }
+        //     //offsetHeight：元素在垂直方向上占用的空间大小
+        //     if(oLeft >= box1.offsetWidth - box_small.offsetWidth){
+        //         oLeft >= box1.offsetWidth - box_small.offsetWidth;
+        //     }
+        //     if(oTop <= 0){
+        //         oTop = 0;
+        //     }
+        //     if(oTop >= box1.offsetHeight - box_small.offsetHeight){
+        //         oTop >= box1.offsetHeight - box_small.offsetHeight;
+        //     }
+        //     //核心代码等比例移动
+        //     m = -((parseInt((img_big.offsetWidth+x)/box2.offsetWidth)*oLeft));
+        //     n = -((parseInt((img_big.offsetHeight+y)/box2.offsetHeight)*oTop));
+        //     box_small.style.left = oLeft + 'px';
+        //     img_big.style.left = m + 'px';
+        //     box_small.style.top = oTop + 'px';
+        //     img_big.style.top = n + 'px';
+        // }.bind(this)
+        // document.onmouseup = function(e){//设置鼠标移除事件
+        //     document.onmousemove = 'null';
+        //     document.onmouseup = 'null'; 
+        // }
+    }
+    </script>
+</body>
+</html>
