@@ -44,7 +44,7 @@
 //     console.log ('test is running')
 // }
 // b=2;
-// //a:undefined
+// //a:1
 // // test is running
 // // 2
 

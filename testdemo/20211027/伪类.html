@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类.html</title>
+    <style>
+        /*css*/
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: green;
+            /* background: olive; */
+
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:focus {
+            color: black;
+            /* 点击后不消失 */
+            /* background-color: skyblue; */
+        }
+
+        a:active {
+            /* active鼠标在元素上按下还没有松开 */
+            color: yellow;
+            /* 点击后就消失 */
+            background-color: skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //数组查重
+        // 双层循环，外层循环元素，内层循环时比较值。值相同时，则删去这个值。
+        function unique(arr) {
+            for (var i = 0; i <= arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        arr.splice(j, 1);
+                        j--;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr = [1, 15, 'true', 'true', true, true, 'true', 15, 15, false, false, undefined, undefined, null, null, NaN, NaN, 'NaN', 0, 0, 'a', 'a', {}, {}];
+        console.log(unique(arr));
+    </script>
+    <p><a href="#">click me</a></p>
+</body>
+
+</html>

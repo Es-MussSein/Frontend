@@ -1,0 +1,3 @@
+[submodule "testdemo/testdemo/demo5_2"]
+	path = testdemo/testdemo/demo5_2
+	url = git@github.com:Es-MussSein/Frontend.git

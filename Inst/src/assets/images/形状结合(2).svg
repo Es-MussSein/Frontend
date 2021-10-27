@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="inst" transform="translate(-770.000000, -220.000000)" fill="#0045FF">
+            <path d="M770,220 L820,220 C847.614237,220 870,242.385763 870,270 C870,297.614237 847.614237,320 820,320 C792.385763,320 770,297.614237 770,270 L770,270 L770,220 Z" id="形状结合"></path>
+        </g>
+    </g>
+</svg>
