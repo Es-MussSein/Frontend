@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 echarts.js -->
+    <script src="echarts.js"></script>
+    <style>
+        #main， html,
+        body {
+            width: 100%;
+        }
+
+        #main {
+            height: 400px;
+            background: #fff;
+        }
+    </style>
+    <title>ECharts</title>
+</head>
+
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main"></div>
+
+    <script type="text/javascript">
+        //基于准备好的DOM，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        //window.onresize事件获取浏览器大小(宽度)改变的事件
+        window.onresize = function () {
+            // 监听图标容器的大小并改变图表大小
+            myChart.resize();
+        };
+
+        //制定图标的配置项和数据
+        // var option = {
+        //     title: {
+        //         text: "ECharts柱状图实例"
+        //     },
+        //     //提示框
+        //     tooltip: {},
+        //     //图例
+        //     legend: {
+        //         data: ["销量"]
+        //     },
+        //     xAxis: {
+        //         data: ["Shirts", "Pants", "Shoes", "Sweaters"]
+        //     },
+        //     yAxis: {
+
+        //     },
+        //     series: [{
+        //         name: "销量",
+        //         type: "bar",
+        //         data: [40, 30, 12.9, 8],
+        //         color: ['#fff']
+        //     }]
+        // };
+
+        //在系列中设置数据
+        // var option = {
+        //     xAxis: {
+        //         type: "category",
+        //         data: ['Matcha Latte', 'Milk Tea', 'Cheese Cocoa', 'Walnut Brown'],
+        //     },
+        //     yAxis: {},
+        //     series: [
+        //         {
+        //             type: "bar",
+        //             name: "2015",
+        //             data: [89.3, 92.1, 94.4, 85.4]
+        //         },
+        //         {
+        //             type: 'bar',
+        //             name: '2016',
+        //             data: [95.8, 89.4, 91.2, 76.9]
+        //         },
+        //         {
+        //             type: 'bar',
+        //             name: '2017',
+        //             data: [97.7, 83.1, 92.5, 78.1]
+        //         }
+        //     ]
+        // };
+
+        //在数据集中设置数据
+        // var option = {
+        //     legend: {},
+        //     tooltip: {},
+        //     dataset: {
+        //         source: [
+        //             ['product', '2015', '2016', '2017'],
+        //             ['Matcha Latte', 43.3, 85.8, 93.7],
+        //             ['Milk Tea', 83.1, 73.4, 55.1],
+        //             ['Cheese Cocoa', 86.4, 65.2, 82.5],
+        //             ['Walnut Brownie', 72.4, 53.9, 39.1]
+        //         ]
+        //     },
+        //     xAxis:{type:"category"},
+        //     yAxis:{},
+        //     series:[{type:"bar"},{type:"bar"},{type:"bar"}]
+        // }
+
+        //把数据集的行或列映射为系列
+        // var option = {
+        //     legend: {},
+        //     tooltip: {},
+        //     dataset: {
+        //         source: [
+        //             ['product', '2015', '2016', '2017'],
+        //             ['Matcha Latte', 43.3, 85.8, 93.7],
+        //             ['Milk Tea', 83.1, 73.4, 55.1],
+        //             ['Cheese Cocoa', 86.4, 65.2, 82.5],
+        //             ['Walnut Brownie', 72.4, 53.9, 39.1]
+        //         ]
+        //     },
+        //     xAxis: [
+        //         // 设置gridIndex选项，标识当前X轴对应的grid索引
+        //         { type: "category", gridIndex: 0 },
+        //         { type: "category", gridIndex: 1 }
+        //     ],
+        //     yAxis: [{ gridIndex: 0 }, { gridIndex: 1 }],
+        //     grid: [{ bottom: "55%" }, { top: "55%" }],
+        //     series: [
+        //         // 这几个系列会出现在第一个直角坐标系中，每个系列对应到 dataset 的每一行。
+        //         { type: 'bar', seriesLayoutBy: 'row' },
+        //         { type: 'bar', seriesLayoutBy: 'row' },
+        //         { type: 'bar', seriesLayoutBy: 'row' },
+        //         // 这几个系列会出现在第二个直角坐标系中，每个系列对应到 dataset 的每一列。
+        //         { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+        //         { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+        //         { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+        //         { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 }
+        //     ]
+        // }
+
+        //数据到图形的映射
+        // var option = {
+        //     dataset: {
+        //         source: [
+        //             ['score', 'amount', 'product'],
+        //             [89.3, 58212, 'Matcha Latte'],
+        //             [57.1, 78254, 'Milk Tea'],
+        //             [74.4, 41032, 'Cheese Cocoa'],
+        //             [50.1, 12755, 'Cheese Brownie'],
+        //             [89.7, 20145, 'Matcha Cocoa'],
+        //             [68.1, 79146, 'Tea'],
+        //             [19.6, 91852, 'Orange Juice'],
+        //             [10.6, 101852, 'Lemon Juice'],
+        //             [32.7, 20112, 'Walnut Brownie']
+        //         ]
+        //     },
+        //     xAxis: {},
+        //     yAxis: { type: 'category' },
+        //     series: [
+        //         {
+        //             type: 'bar',
+        //             encode: {
+        //                 // 将 "amount" 列映射到 X 轴。
+        //                 x: 'amount',
+        //                 // 将 "product" 列映射到 Y 轴。
+        //                 y: 'product',
+        //             }
+        //         }
+        //     ]
+        // }
+
+        //把第三列映射为气泡图的点的大小
+        // var option = {
+        //     dataset: {
+        //         source: [
+        //             [12, 323, 11.2],
+        //             [23, 167, 8.3],
+        //             [81, 284, 12],
+        //             [91, 413, 4.1],
+        //             [13, 287, 13.5]
+        //         ]
+        //     },
+        //     visualMap :{
+        //         show:false,
+        //         //指向第三列（列序号从 0 开始记，所以设置为 2）
+        //         dimension:2,
+        //         min:2,
+        //         max:15,
+        //         inRange:{
+        //             //气泡尺寸，5-60像素
+        //             symbolSize:[5,60]
+        //         }
+        //     },
+        //     xAxis:{},
+        //     yAxis:{},
+        //     series:{
+        //         type:'scatter'
+        //     }
+        // }
+
+        //饼状图
+        var option = {
+            dataset: [
+                {
+                    source: [
+                        ['Product', 'Sales', 'Price', 'Year'],
+                        ['Cake', 123, 32, 2011],
+                        ['Cereal', 231, 14, 2011],
+                        ['Tofu', 235, 5, 2011],
+                        ['Dumpling', 341, 25, 2011],
+                        ['Biscuit', 122, 29, 2011],
+                        ['Cake', 143, 30, 2012],
+                        ['Cereal', 201, 19, 2012],
+                        ['Tofu', 255, 7, 2012],
+                        ['Dumpling', 241, 27, 2012],
+                        ['Biscuit', 102, 34, 2012],
+                        ['Cake', 153, 28, 2013],
+                        ['Cereal', 181, 21, 2013],
+                        ['Tofu', 395, 4, 2013],
+                        ['Dumpling', 281, 31, 2013],
+                        ['Biscuit', 92, 39, 2013],
+                        ['Cake', 223, 29, 2014],
+                        ['Cereal', 211, 17, 2014],
+                        ['Tofu', 345, 3, 2014],
+                        ['Dumpling', 211, 35, 2014],
+                        ['Biscuit', 72, 24, 2014]
+                    ]
+                },
+                {
+                    //dataset的index是1
+                    // 这个 `transform` 配置，表示，此 dataset 的数据，来自于此 transform 的结果。
+                    transform: {
+                        type: 'filter',
+                        config: { dimension: 'Year', value: 2011 }
+                    }
+                },
+                {
+                    // 这个 dataset 的 index 是 `2`。
+                    // 同样，这里因为 `fromDatasetIndex` 和 `fromDatasetId` 都没有被指定，
+                    // 那么输入默认来自于 index 为 `0` 的 dataset 。
+                    transform: {
+                        // 这个类型为 "filter" 的 transform 能够遍历并筛选出满足条件的数据项。
+                        type: 'filter',
+                        // 每个 transform 如果需要有配置参数的话，都须配置在 `config` 里。
+                        // 在这个 "filter" transform 中，`config` 用于指定筛选条件。
+                        // 下面这个筛选条件是：选出维度（ dimension ）'Year' 中值为 2012 的所有
+                        // 数据项。
+                        config: { dimension: 'Year', value: 2012 }
+                    }
+                },
+                {
+                    // 这个 dataset 的 index 是 `3`。
+                    transform: {
+                        type: 'filter',
+                        config: { dimension: 'Year', value: 2013 }
+                    }
+                }
+            ],
+            series: [
+                {
+                    type: 'pie',
+                    radius: 50,
+                    center: ['25%', '50%'],
+                    datasetIndex: 1
+                },
+                {
+                    type: 'pie',
+                    radius: 100,
+                    center: ['75%', '50%'],
+                    datasetIndex: 3
+                }
+            ]
+        }
+
+        //使用刚才指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

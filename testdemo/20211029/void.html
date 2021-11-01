@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript:void(0) 含义
+    </title>
+</head>
+
+<body>
+    <script>
+        function Foo() { return this; }
+        Foo.getName = function () {
+            console.log('1');
+        }
+        Foo.prototype.getName = function () {
+            console.log('2');
+        }
+        new Foo.getName();//1
+
+        new Foo().getName();//2 
+        //(new Foo()).getName();先执行new Foo()产生了一个实例，然后通过原型链找到了Foo上的getName函数
+
+
+        //实现instanceof
+        function instanceOf(left,right){
+            //获得类型的原型
+            let prototype  = right.prototype;
+            //获得对象的原型
+            let left = left.__proto__;
+            //判断对象的类型是否等于类型的原型
+            while(true){
+                if(left===null)return false;
+                if(prototype===left)return true;
+                left = left.__proto__;
+            }
+        }
+        
+    </script>
+    <a href="javascript:void(0)">无事发生</a>
+    <a href="javascript:void(alert('Warning!'))">点击后弹出警告</a>
+    <!-- （# 主要用于配合 location.hash） -->
+    <a href="#">点击后阻止链接跳转，但是url后多一个#</a>
+    <!-- （? 主要用于配合 location.search） -->
+    <a href="?">点击后阻止链接跳转，但是url出现一个？</a>
+    <a href="javascript:0">Chrome点击此处阻止链接跳转,但是firefox中会变成一个字符串0</a>
+</body>
+
+</html>
